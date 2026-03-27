@@ -1,0 +1,25 @@
+# 核心依赖
+streamlit>=1.30.0
+langchain>=0.1.0
+langchain-core>=0.1.0
+langchain-community>=0.0.20
+langgraph>=0.0.30
+pyyaml>=6.0
+
+# 向量数据库
+chromadb>=0.4.0
+langchain-chroma>=0.1.0
+
+# 网络工具依赖
+requests>=2.31.0
+duckduckgo-search>=6.0.0
+beautifulsoup4>=4.12.0
+lxml>=5.0.0
+httpx>=0.25.0
+
+# 阿里云模型SDK
+dashscope>=1.14.0
+langchain-dashscope>=0.1.0
+
+# 数据处理
+pandas>=2.0.0

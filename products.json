@@ -1,0 +1,108 @@
+{
+  "扫地机器人": [
+    {
+      "model": "追觅S10",
+      "price": 2999,
+      "features": ["4000Pa吸力", "激光导航", "自动集尘", "3D结构光避障"],
+      "suitable_for": "中大户型家庭，需要全面清洁",
+      "rating": 4.8
+    },
+    {
+      "model": "石头P10",
+      "price": 3299,
+      "features": ["5500Pa吸力", "AI避障", "自动洗拖布", "热风烘干"],
+      "suitable_for": "注重拖地效果的家庭",
+      "rating": 4.9
+    },
+    {
+      "model": "科沃斯T20",
+      "price": 3999,
+      "features": ["6000Pa吸力", "TrueDetect 3D", "自动补水", "全能基站"],
+      "suitable_for": "高端用户，追求极致体验",
+      "rating": 4.7
+    },
+    {
+      "model": "追觅S8",
+      "price": 1999,
+      "features": ["3000Pa吸力", "激光导航", "APP控制", "地毯识别"],
+      "suitable_for": "小户型，入门级用户",
+      "rating": 4.6
+    },
+    {
+      "model": "科沃斯N8",
+      "price": 1799,
+      "features": ["2600Pa吸力", "激光导航", "双边刷", "大尘盒"],
+      "suitable_for": "预算有限的用户",
+      "rating": 4.5
+    }
+  ],
+  "扫拖一体机器人": [
+    {
+      "model": "追觅X30",
+      "price": 4999,
+      "features": ["7000Pa吸力", "仿生机械臂", "自动上下水", "双轮增压拖布"],
+      "suitable_for": "大户型，追求深度清洁",
+      "rating": 4.9
+    },
+    {
+      "model": "石头G10S Pure",
+      "price": 3999,
+      "features": ["5100Pa吸力", "声波震动擦地", "自动抬升拖布", "抗菌拖布"],
+      "suitable_for": "有地毯的家庭",
+      "rating": 4.8
+    },
+    {
+      "model": "石头P10 Pro",
+      "price": 4299,
+      "features": ["7000Pa吸力", "AI脏污识别", "动态复拖", "自动添加清洁液"],
+      "suitable_for": "追求智能化体验的用户",
+      "rating": 4.8
+    },
+    {
+      "model": "科沃斯T10 OMNI",
+      "price": 4599,
+      "features": ["5000Pa吸力", "AIVI 3D避障", "自动集尘洗拖", "YIKO语音"],
+      "suitable_for": "喜欢语音控制的用户",
+      "rating": 4.7
+    }
+  ],
+  "手持吸尘器": [
+    {
+      "model": "追觅V16",
+      "price": 2499,
+      "features": ["210AW吸入功率", "85分钟续航", "5重过滤", "多种吸头"],
+      "suitable_for": "需要灵活清洁的用户",
+      "rating": 4.7
+    },
+    {
+      "model": "追觅V12",
+      "price": 1799,
+      "features": ["150AW吸入功率", "60分钟续航", "4重过滤", "轻量化设计"],
+      "suitable_for": "预算有限但需要手持清洁的用户",
+      "rating": 4.6
+    }
+  ],
+  "配件耗材": [
+    {
+      "model": "HEPA滤网（通用）",
+      "price": 59,
+      "features": ["H12级过滤", "水洗可重复使用"],
+      "suitable_for": "所有型号",
+      "rating": 4.5
+    },
+    {
+      "model": "主刷胶刷",
+      "price": 89,
+      "features": ["防缠绕设计", "静音运行"],
+      "suitable_for": "养宠家庭",
+      "rating": 4.7
+    },
+    {
+      "model": "拖布套装",
+      "price": 49,
+      "features": ["超细纤维", "强力去污"],
+      "suitable_for": "扫拖一体机型",
+      "rating": 4.6
+    }
+  ]
+}
