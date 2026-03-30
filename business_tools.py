@@ -4,7 +4,6 @@
 """
 
 import json
-import random
 from datetime import datetime
 from langchain_core.tools import tool
 from project.logger_handler import logger
@@ -538,15 +537,3 @@ def consumable_reminder(device_model: str = "", usage_months: int = 0) -> str:
     result += "💡 提示：建议通过官方渠道购买耗材，确保质量和兼容性。"
 
     return result
-
-
-# 导出所有工具
-BUSINESS_TOOLS = [
-    recommend_product,
-    diagnose_fault,
-    maintenance_advice,
-    query_usage_record,
-    get_current_month,
-    query_order,
-    consumable_reminder
-]
