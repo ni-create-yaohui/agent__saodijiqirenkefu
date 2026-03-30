@@ -4,10 +4,9 @@
 """
 
 import json
-import os
 from datetime import datetime
 from pathlib import Path
-from typing import Dict, List, Optional, Any
+from typing import Dict, List, Optional
 from project.path_tool import get_abs_path
 from project.logger_handler import logger
 
@@ -80,11 +79,6 @@ class UserService(FileStorageService):
             self._save(data)
             return True
         return False
-
-    def list_users(self) -> List[Dict]:
-        """获取所有用户列表"""
-        data = self._load()
-        return list(data.values())
 
 
 class SessionService(FileStorageService):
@@ -260,35 +254,6 @@ class ReportService(FileStorageService):
     def __init__(self):
         super().__init__("data/reports", "reports_index.json")
 
-    def create_report(self, user_id: str, title: str, content: str,
-                      report_type: str = "usage", month: str = None,
-                      session_id: str = None, summary: str = None) -> Dict:
-        """创建报告"""
-        import uuid
-        report_id = f"R{datetime.now().strftime('%Y%m%d')}{str(uuid.uuid4())[:4].upper()}"
-
-        data = self._load()
-        report = {
-            "report_id": report_id,
-            "user_id": user_id,
-            "session_id": session_id,
-            "title": title,
-            "report_type": report_type,
-            "month": month,
-            "content": content,
-            "summary": summary or content[:200] + "...",
-            "created_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        }
-        data[report_id] = report
-        self._save(data)
-
-        return report
-
-    def get_report(self, report_id: str) -> Optional[Dict]:
-        """获取报告"""
-        data = self._load()
-        return data.get(report_id)
-
     def list_reports(self, user_id: str = None, report_type: str = None,
                      limit: int = 20) -> List[Dict]:
         """获取报告列表"""
@@ -356,19 +321,6 @@ class ToolLogService(FileStorageService):
         data[log_entry["id"]] = log_entry
         self._save(data)
 
-    def get_logs(self, session_id: str = None, tool_name: str = None,
-                 limit: int = 50) -> List[Dict]:
-        """获取日志"""
-        data = self._load()
-        logs = list(data.values())
-
-        if session_id:
-            logs = [l for l in logs if l.get("session_id") == session_id]
-        if tool_name:
-            logs = [l for l in logs if l.get("tool_name") == tool_name]
-
-        logs.sort(key=lambda x: x.get("created_at", "0"), reverse=True)
-        return logs[:limit]
 
 
 class FeedbackService(FileStorageService):
@@ -397,13 +349,6 @@ class FeedbackService(FileStorageService):
         self._save(data)
 
         return feedback
-
-    def list_feedback(self, limit: int = 50) -> List[Dict]:
-        """获取反馈列表"""
-        data = self._load()
-        feedbacks = list(data.values())
-        feedbacks.sort(key=lambda x: x.get("created_at", "0"), reverse=True)
-        return feedbacks[:limit]
 
 
 # 创建全局服务实例
