@@ -104,25 +104,6 @@ class ReactAgent:
             if latest_message.content:
                 yield latest_message.content.strip() + "\n"
 
-    def execute(self, query: str) -> str:
-        """
-        同步执行智能体
-
-        Args:
-            query: 用户查询
-
-        Returns:
-            完整响应文本
-        """
-        result = ""
-        for chunk in self.execute_stream(query):
-            result += chunk
-        return result
-
-
-# 默认智能体实例
-default_agent = ReactAgent()
-
 
 if __name__ == '__main__':
     agent = ReactAgent()
