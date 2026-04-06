@@ -1,11 +1,7 @@
 # agent__saodijiqirenkefu
 这是一个智能体客服项目，遵循react架构
-将react_agent放到agent目录下
-将agent，business和web_tool和middleware文件放到agent/tools目录下
-将所有yml文件放到config目录下
-将factory放到model目录下
-将config_hander，file_hander，logger_handler，path_tool，prompt_loader放到project目录下
-将所有_prompt.txt文件放到prompts目录下
-将rag_service和vector_store放到rag目录下
-将storage_service和init放到service目录下
-app放到主目录
+
+我用夸克网盘给你分享了「agent项目 (2).zip」，点击链接或复制整段内容，打开「夸克APP」即可获取。
+/~8c753Y1p8v~:/
+夸克网盘 链接：https://pan.quark.cn/s/e789f00335cb
+使用javascript重构前端。增加了新的工单功能
